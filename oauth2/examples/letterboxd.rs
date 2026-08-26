@@ -14,7 +14,7 @@
 //! ```
 
 use hex::ToHex;
-use hmac::{Hmac, Mac};
+use hmac::{Hmac, KeyInit, Mac};
 use oauth2::{
     basic::BasicClient, AuthType, AuthUrl, ClientId, ClientSecret, HttpRequest, HttpResponse,
     ResourceOwnerPassword, ResourceOwnerUsername, SyncHttpClient, TokenUrl,
