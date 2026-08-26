@@ -51,12 +51,6 @@
 //!    Asynchronous client: [`reqwest::Client`] (requires either the
 //!    `reqwest` or `reqwest-blocking` feature flags)
 //!
-//!  * **[`oauth2-reqwest`]**
-//!
-//!    The [`oauth2-reqwest`](https://docs.rs/oauth2-reqwest/latest) crate provides a wrapper
-//!    with the same `reqwest` 0.13 support as the bundled client and is useful when keeping the
-//!    HTTP client dependency separate from `oauth2`.
-//!
 //!  * **[`curl`]**
 //!
 //!    The `curl` HTTP client only supports the synchronous HTTP client mode and can be enabled in

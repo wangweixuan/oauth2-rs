@@ -26,7 +26,7 @@ jobs:
       fail-fast: false
       matrix:
         rust_os:
-          - { rust: 1.85.0, os: ubuntu-22.04 }
+          - { rust: 1.88.0, os: ubuntu-22.04 }
           - { rust: stable, os: ubuntu-latest }
           - { rust: beta, os: ubuntu-latest }
           - { rust: nightly, os: ubuntu-latest }
@@ -61,11 +61,11 @@ jobs:
         run: cargo ${CARGO_LOCKED} test --tests --features curl --no-default-features
 
       - name: Check fmt
-        if: ${{ matrix.rust_os.rust == '1.85.0' }}
+        if: ${{ matrix.rust_os.rust == '1.88.0' }}
         run: cargo ${CARGO_LOCKED} fmt --all -- --check
 
       - name: Clippy
-        if: ${{ matrix.rust_os.rust == '1.85.0' }}
+        if: ${{ matrix.rust_os.rust == '1.88.0' }}
         run: cargo ${CARGO_LOCKED} clippy --all --all-features -- --deny warnings
 
       - name: Audit
