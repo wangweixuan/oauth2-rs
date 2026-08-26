@@ -20,7 +20,7 @@ default = ["reqwest", "rustls-tls"]
 pkce-plain = []
 native-tls = ["reqwest/native-tls"]
 reqwest-blocking = ["reqwest/blocking"]
-rustls-tls = ["reqwest/rustls-tls"]
+rustls-tls = ["reqwest/rustls"]
 timing-resistant-secret-traits = []
 
 [[example]]
@@ -62,7 +62,7 @@ chrono = { version = "0.4.45", default-features = false, features = ["clock", "s
 serde_path_to_error = "0.1.20"
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-getrandom = { version = "0.4.3", features = ["js"] }
+getrandom = { version = "0.4.3", features = ["wasm_js"] }
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 curl = { version = "0.4.50", optional = true }
