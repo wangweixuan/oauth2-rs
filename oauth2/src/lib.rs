@@ -40,7 +40,7 @@
 //!
 //! For the HTTP client modes described above, the following HTTP client implementations can be
 //! used:
-//!  * **[`reqwest`] 0.12**
+//!  * **[`reqwest`] 0.13**
 //!
 //!    The `reqwest` HTTP client supports both the synchronous and asynchronous modes and is enabled
 //!    by default.
@@ -51,11 +51,11 @@
 //!    Asynchronous client: [`reqwest::Client`] (requires either the
 //!    `reqwest` or `reqwest-blocking` feature flags)
 //!
-//!  * **[`reqwest`] 0.13**
+//!  * **[`oauth2-reqwest`]**
 //!
-//!    Support for `reqwest` 0.13 is provided by the
-//!    [`oauth2-reqwest`](https://docs.rs/oauth2-reqwest/latest) crate. Please refer to that
-//!    crate's documentation for usage instructions.
+//!    The [`oauth2-reqwest`](https://docs.rs/oauth2-reqwest/latest) crate provides a wrapper
+//!    with the same `reqwest` 0.13 support as the bundled client and is useful when keeping the
+//!    HTTP client dependency separate from `oauth2`.
 //!
 //!  * **[`curl`]**
 //!

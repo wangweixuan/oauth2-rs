@@ -4,16 +4,14 @@
 //! # Motivation
 //!
 //! The `reqwest` client [bundled](https://docs.rs/oauth2/latest/oauth2/#http-clients) with `oauth2`
-//! supports `reqwest` version 0.12. This separate crate supports `reqwest` version 0.13 and is
-//! intended to support future versions of `reqwest` without needing a new SemVer major version
-//! number for `oauth2` (which would otherwise be required due to breaking changes to that crate's
-//! public API).
+//! supports `reqwest` version 0.13. This separate crate provides a wrapper around the same
+//! `reqwest` version while keeping the HTTP client dependency separate from `oauth2`.
 //!
 //! # Usage
 //!
 //! To get started, add the following dependencies to your crate's `Cargo.toml`:
 //! ```toml
-//! # Disables oauth2's default reqwest 0.12 client.
+//! # Disables oauth2's default reqwest client.
 //! oauth2 = { version = "5", default-features = false }
 //!
 //! # Imports reqwest without any feature flags enabled.
