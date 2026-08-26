@@ -1,0 +1,25 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: ["config:best-practices"],
+  timezone: "Asia/Shanghai",
+  baseBranches: ["renovate-base"],
+  rangeStrategy: "bump",
+  automergeStrategy: "rebase",
+  platformAutomerge: true,
+  assigneesFromCodeOwners: false,
+
+  lockFileMaintenance: {
+    schedule: ["* * 1 * *"],
+    automerge: true,
+  },
+
+  packageRules: [
+    {
+      groupName: "non-major dependencies",
+      groupSlug: "non-major",
+      matchPackageNames: ["*"],
+      matchUpdateTypes: ["minor", "patch", "pin", "digest", "pinDigest"],
+      automerge: true,
+    },
+  ],
+}
